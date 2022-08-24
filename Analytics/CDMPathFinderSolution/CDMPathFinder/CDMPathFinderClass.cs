@@ -28,7 +28,7 @@ namespace CDMPathFinder
             try
             {
                 BlobContainerClient container = new BlobContainerClient(ConnectionString, ContainerName);
-                BlobClient client = container.GetBlobClient(TablesManifestPath);
+                BlobClient client = container.GetBlobClient(ContainerName);
                 retVal = this.GetTablesPath(container, TablesManifestPath);
             }
             catch (Exception e)
